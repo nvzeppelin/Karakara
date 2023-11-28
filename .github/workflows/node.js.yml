@@ -25,14 +25,12 @@ jobs:
     - name: Build client
       working-directory: ./client
       run: |
-        pwd
         npm i
         npm ci
-        npm build
-    - name: Build
+        npm run build
+    - name: Build login
       working-directory: ./login
       run: |
-        pwd
         npm i
         npm ci
-        npm build
+        npm run build
