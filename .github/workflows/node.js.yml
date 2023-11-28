@@ -24,12 +24,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Build client
       working-directory: ./client
+      env:
+        CI: ""
       run: |
         npm i
         npm ci
         npm run build
     - name: Build login
       working-directory: ./login
+      env:
+        CI: ""
       run: |
         npm i
         npm ci
